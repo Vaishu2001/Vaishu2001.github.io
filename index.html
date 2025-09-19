@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaishnavi Kudlu · Portfolio</title>
+  <meta name="description" content="Portfolio of Vaishnavi Kudlu — Java + Spring Boot, ReactJS, SQL/NoSQL, microservices.">
+  <meta property="og:title" content="Vaishnavi Kudlu · Portfolio" />
+  <meta property="og:description" content="Java microservices (Spring Boot), ReactJS, SQL/NoSQL, DevOps." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #11182a;
+      --muted: #9fb0ca;
+      --text: #eaf2ff;
+      --accent: #60a5fa;
+      --chip: #1b2540;
+      --border: #223052;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 28px; border: 1px solid var(--border); background: linear-gradient(180deg, rgba(96,165,250,0.08), rgba(17,24,42,0.6)); border-radius: 20px; }
+    .title { font-size: 36px; font-weight: 700; letter-spacing: 0.2px; }
+    .subtitle { color: var(--muted); line-height: 1.6; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { background: var(--chip); border: 1px solid var(--border); color: var(--muted); padding: 6px 10px; border-radius: 999px; font-size: 12px; }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 24px; }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 2fr 1fr; }
+    }
+
+    section.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+    section.card h2 { margin: 0 0 14px; font-size: 20px; }
+    section.card p { color: var(--muted); line-height: 1.7; }
+
+    .project { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: #0e1527; }
+    .project + .project { margin-top: 12px; }
+    .project h3 { margin: 0 0 6px; font-size: 16px; }
+    .project .meta { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .project ul { margin: 8px 0 0 18px; color: var(--muted); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skills .chip { font-size: 13px; padding: 8px 12px; }
+
+    .list { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    footer { text-align: center; color: var(--muted); margin: 28px 0 8px; font-size: 13px; }
+
+    .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .btn {
+      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); background: #0c1426;
+      color: var(--text); font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn:hover { filter: brightness(1.1); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HERO -->
+    <header>
+      <div class="title">Vaishnavi Kudlu</div>
+      <div class="subtitle">
+        Building reliable backends with <strong>Java & Spring Boot</strong> and modern UIs with <strong>React</strong>. Experience across SQL & NoSQL, microservices, and CI/CD.
+      </div>
+      <div class="tags">
+        <span class="chip">Java · Spring Boot</span>
+        <span class="chip">ReactJS</span>
+        <span class="chip">SQL · MongoDB</span>
+        <span class="chip">Microservices</span>
+        <span class="chip">Kafka</span>
+        <span class="chip">Git · Jenkins</span>
+        <span class="chip">SonarQube</span>
+        <span class="chip">Micro‑frontend (Module Federation)</span>
+      </div>
+      <div class="btns">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="#contact">Contact</a>
+        <!-- Replace this with your real resume link (PDF in your repo) -->
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- SUMMARY -->
+        <section class="card">
+          <h2>Summary</h2>
+          <p>
+            Product‑oriented engineer experienced in Java microservices with Spring Boot and front‑end development in ReactJS.
+            Comfortable across REST APIs, SQL/MongoDB, Kafka, and CI/CD. Passionate about clean code, maintainability, and building
+            user‑friendly interfaces.
+          </p>
+        </section>
+
+        <!-- PROJECTS / EXPERIENCE -->
+        <section class="card" id="projects">
+          <h2>Experience & Projects</h2>
+
+          <div class="project">
+            <h3>GxQuality — Testing Automation Platform</h3>
+            <div class="meta">Tech: React (Micro‑frontend), Java, Spring Boot, Kafka, MongoDB, Selenium Grid, SonarQube</div>
+            <p>
+              Versatile testing automation tool for Web, REST, ETL, Mobile, and Mainframe (3270) with security checks, certification
+              capabilities, and live execution previews. Integrates with Selenium Grid and includes a test case recorder for web tests.
+            </p>
+            <ul>
+              <li>Built dynamic, responsive UIs in React and improved usability.</li>
+              <li>Developed REST APIs with Spring Boot for seamless FE/BE communication.</li>
+              <li>Enhanced recorder features for capturing user interactions and scenarios.</li>
+              <li>Configured SonarQube quality gates across jobs; performed unit testing and bug fixes.</li>
+              <li>Worked with SOAP services and WSDL parsing for service certification.</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Approved Software Products (Fisher)</h3>
+            <div class="meta">Tech: Java 8, Spring Boot, MS SQL, ReactJS, Microservices, Git</div>
+            <p>
+              Customized GxCapture product for client requirements, delivering robust UI and API enhancements with strong testing.
+            </p>
+            <ul>
+              <li>Collaborated on requirements; designed responsive React interfaces.</li>
+              <li>Built and integrated RESTful services; optimized performance and reliability.</li>
+              <li>Managed SQL data flows and ensured integrity; wrote unit tests and resolved defects.</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>GxCapture — Tech Refresh Program (Fisher)</h3>
+            <div class="meta">Tech: React, Java, Spring Boot, MS SQL, HTML/CSS/JS, Git</div>
+            <p>
+              Platform to standardize upgrades from legacy, end‑of‑life Windows/SQL servers—reducing ESU costs and risk through
+              consistent processes and tooling.
+            </p>
+            <ul>
+              <li>Delivered UI features (TRP reports, bulk edit) and fixed SailPoint/Tech Refresh UI issues.</li>
+              <li>Implemented REST APIs, database queries, and front‑end polish for usability.</li>
+              <li>Improved user satisfaction via intuitive, efficient, and accessible interfaces.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <section class="card">
+          <h2>Core Skills</h2>
+          <div class="skills">
+            <span class="chip">Core Java</span>
+            <span class="chip">Spring MVC · Spring Data JPA</span>
+            <span class="chip">REST · Postman · Curl</span>
+            <span class="chip">Kafka</span>
+            <span class="chip">MSSQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Hibernate · JDBC</span>
+            <span class="chip">HTML · CSS · JavaScript</span>
+            <span class="chip">ReactJS</span>
+            <span class="chip">Git · GitHub</span>
+            <span class="chip">Jenkins</span>
+            <span class="chip">Maven</span>
+            <span class="chip">SonarQube</span>
+            <span class="chip">AWS (EC2, EBS, S3)</span>
+            <span class="chip">Windows · Linux</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Education</h2>
+          <p><strong>BE, Computer Science & Engineering</strong> — VTU</p>
+        </section>
+
+        <section class="card">
+          <h2>Certifications</h2>
+          <ul class="list">
+            <li>MongoDB with Java Spring Boot & Spring Framework (2024)</li>
+            <li>Effective Jenkins — Continuous Delivery with Jenkins Pipeline (2024)</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Currently Exploring</h2>
+          <ul class="list">
+            <li>React Native (building a real‑world mobile app)</li>
+            <li>Docker & Kubernetes (containerization & orchestration)</li>
+            <li>GitLab CI/CD (end‑to‑end automation)</li>
+          </ul>
+        </section>
+
+        <section class="card" id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="vaishnavishetty174@gmail.com">vaishnavishetty174@gmail.com</a></p>
+          <p>GitHub: <a href="https://Vaishu2001.github.io" target="_blank" rel="noopener" class="mono">https://Vaishu2001.github.io</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/vaishnavi-k-b21859190/" target="_blank" rel="noopener">https://www.linkedin.com/in/vaishnavi-k-b21859190/</a></p>
+          <p style="margin-top:10px; color: var(--muted); font-size: 13px;">Replace placeholders above with your actual contact links. Add a PDF named <span class="mono">resume.pdf</span> to your repo root for the download button.</p>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Vaishnavi Kudlu 
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
